@@ -1,21 +1,17 @@
+# Excel Merge Tool 📊⇨📈
 
-# Excel 表格合并工具 📊⇨📈
+An automated tool for merging multiple Excel files, specifically designed for tables with identical headers. Supports both .xlsx and .xls formats.
 
-![Python版本](https://img.shields.io/badge/Python-3.7%2B-blue)
-![GitHub stars](https://img.shields.io/github/stars/your-username/python_Excel_merge_tool?style=social)
+## 🚀 Core Features
 
-一款自动化合并多Excel文件的工具，专为处理表头相同的表格设计，支持.xlsx和.xls格式
+- **Smart Merging**: Automatically identifies and merges multiple Excel files with the same headers.
+- **Format Preservation**: Maintains original cell styles and data types.
+- **Batch Processing**: Supports one-click merging of entire folders.
 
-## 🚀 核心功能
-
-- **智能合并**：自动识别相同表头的多个Excel文件
-- **格式保留**：保持原单元格样式和数据类型
-- **批处理**：支持整个文件夹一键合并
-
-## 🛠️ 技术实现
+## 🛠️ Technical Implementation
 
 ```python
-# 核心合并逻辑示例
+# Core merge logic example
 def merge_excels(file_list, output_path):
     combined_df = pd.DataFrame()
     for file in file_list:
@@ -24,49 +20,45 @@ def merge_excels(file_list, output_path):
     combined_df.to_excel(output_path, index=False)
 ```
 
-**技术栈**：
-- pandas（数据处理）
-- openpyxl（Excel操作）
-- tkinter（GUI界面）
+**Tech Stack**:
+- pandas (Data processing)
+- openpyxl (Excel operations)
+- tkinter (GUI interface)
 
-## 📦 使用方式
+## 📦 Usage
 
-### 图形界面操作
-1. 双击运行 `excel合并工具.exe`
-2. 选择包含Excel的文件夹
-3. 设置输出文件路径
-4. 点击"开始合并"按钮
+### GUI Operation
+1. Double-click `excel合并工具.exe` to run.
+2. Select the folder containing the Excel files.
+3. Set the output file path.
+4. Click the "Start Merge" button.
 
-### 命令行操作
+### Command Line Operation
 ```bash
-python excel合并工具_code.py -i "输入文件夹路径" -o "输出文件.xlsx"
+python excel合并工具_code.py -i "Input Folder Path" -o "Output File.xlsx"
 ```
 
-## 📂 文件结构
+## 📂 File Structure
 ```
 python_Excel_merge_tool/
-├── excel合并工具.exe      # 可执行程序
-├── excel合并工具_code.py  # 源代码
+├── excel合并工具.exe      # Executable program
+├── excel合并工具_code.py  # Source code
 ```
 
-## 💡 典型应用场景
+## 💡 Typical Use Cases
 
-1. **月度报表合并**：将30个分表合并为季度总表
-2. **多部门数据汇总**：整合销售/财务/生产等部门报表
-3. **科研数据处理**：合并实验重复数据
+1. **Monthly Report Merging**: Combine 30 individual sheets into a quarterly summary.
+2. **Multi-Department Data Aggregation**: Consolidate reports from Sales, Finance, and Production departments.
+3. **Scientific Data Processing**: Merge repeated experimental data sets.
 
-## 🚨 注意事项
+## 🚨 Important Notes
 
-- 确保所有文件表头完全一致
-- 建议提前备份原始文件
-- 合并10万+行数据可能需要2分钟
-- 中文路径需使用Python 3.7+
-
-
-## 📄 开源协议
-[MIT License](LICENSE)
+- Ensure all files have identical headers.
+- It is recommended to back up original files beforehand.
+- Merging 100,000+ rows may take approximately 2 minutes.
+- Chinese file paths require Python 3.7 or higher.
 
 ---
 
-⭐ **如果这个工具节省了您的时间，请点个Star！**  
-🐛 **问题反馈**：附上样例文件和错误日志截图
+⭐ **If this tool saves you time, please give it a Star!**  
+🐛 **Issue Reporting**: Please attach sample files and screenshots of error logs.
